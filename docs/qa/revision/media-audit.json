@@ -1,0 +1,298 @@
+[
+  {
+    "file": "city-mobile.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "avg_frame_rate": "24/1",
+        "duration": "15.000000"
+      }
+    ],
+    "format": {
+      "duration": "15.000000",
+      "size": "4396781"
+    },
+    "fullDecodeOK": true,
+    "sha256": "8d3234e5144171841a43baf33fe4f776122c2f18612726cd0f3b934e6aa90439"
+  },
+  {
+    "file": "city.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "24/1",
+        "duration": "15.000000"
+      }
+    ],
+    "format": {
+      "duration": "15.000000",
+      "size": "8255053"
+    },
+    "fullDecodeOK": true,
+    "sha256": "3a351163290e5f02b685fe70647b7255fa9a529ea064b9b4000bf4059355014b"
+  },
+  {
+    "file": "earth-mobile.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "avg_frame_rate": "24/1",
+        "duration": "11.000000"
+      }
+    ],
+    "format": {
+      "duration": "11.000000",
+      "size": "1380390"
+    },
+    "fullDecodeOK": true,
+    "sha256": "89d76e8b9aa8c48830b2415c1a57cf6044f6882695ddb3dd0ffae909459e7b75"
+  },
+  {
+    "file": "earth.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "24/1",
+        "duration": "11.000000"
+      }
+    ],
+    "format": {
+      "duration": "11.000000",
+      "size": "3360884"
+    },
+    "fullDecodeOK": true,
+    "sha256": "2d33cbd89f04b9dc73272a94e77b3aa9496dcad8e0423a72b5b15169106224e8"
+  },
+  {
+    "file": "fashion-mobile.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "avg_frame_rate": "24/1",
+        "duration": "9.000000"
+      }
+    ],
+    "format": {
+      "duration": "9.000000",
+      "size": "1644923"
+    },
+    "fullDecodeOK": true,
+    "sha256": "69e9529c14e5bb94a1206c3dcbaa1ea9a9a534d5ea6d1c1918bc6924060b3083"
+  },
+  {
+    "file": "fashion.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "24/1",
+        "duration": "9.000000"
+      }
+    ],
+    "format": {
+      "duration": "9.000000",
+      "size": "2471142"
+    },
+    "fullDecodeOK": true,
+    "sha256": "15ddfb893206d1ddc323abc964e9d7fae3a2a1ca7855c3303d9bc19273ecebb5"
+  },
+  {
+    "file": "finale-mobile.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "avg_frame_rate": "24/1",
+        "duration": "18.000000"
+      }
+    ],
+    "format": {
+      "duration": "18.000000",
+      "size": "3651493"
+    },
+    "fullDecodeOK": true,
+    "sha256": "3c3a674d84f481600e14a9682ea21a1baf7d2b592ed7977ee555cc78af7e6340"
+  },
+  {
+    "file": "finale.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "24/1",
+        "duration": "18.000000"
+      }
+    ],
+    "format": {
+      "duration": "18.000000",
+      "size": "7799293"
+    },
+    "fullDecodeOK": true,
+    "sha256": "6548a8881dab5a357d3eb9600f5d31b1aa983077d1be9d5cef363e191a9e8358"
+  },
+  {
+    "file": "future-mobile.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "avg_frame_rate": "24/1",
+        "duration": "10.000000"
+      }
+    ],
+    "format": {
+      "duration": "10.000000",
+      "size": "2266315"
+    },
+    "fullDecodeOK": true,
+    "sha256": "5e03c32f017ad07924e5fbcbe184c174f1a9b81b4148c30953cb4132ba18dd13"
+  },
+  {
+    "file": "future.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "24/1",
+        "duration": "10.000000"
+      }
+    ],
+    "format": {
+      "duration": "10.000000",
+      "size": "5622639"
+    },
+    "fullDecodeOK": true,
+    "sha256": "ad11e686831e1913cc5ae3193e6501e9e23551836416bbdf0e523c4f588cba54"
+  },
+  {
+    "file": "nature-mobile.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "avg_frame_rate": "24/1",
+        "duration": "10.000000"
+      }
+    ],
+    "format": {
+      "duration": "10.000000",
+      "size": "1276201"
+    },
+    "fullDecodeOK": true,
+    "sha256": "153996be74bb0191b47304c80ac4228ebdae361367fe952916729456b2302bee"
+  },
+  {
+    "file": "nature.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "24/1",
+        "duration": "10.000000"
+      }
+    ],
+    "format": {
+      "duration": "10.000000",
+      "size": "3591219"
+    },
+    "fullDecodeOK": true,
+    "sha256": "7b714c8ffc54c65ceb5a9e8e26d23fdfdb9107987f94d2364be5f7452b29a044"
+  },
+  {
+    "file": "speech-mobile.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "avg_frame_rate": "24/1",
+        "duration": "15.375000"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "avg_frame_rate": "0/0",
+        "duration": "15.360000"
+      }
+    ],
+    "format": {
+      "duration": "15.375000",
+      "size": "5521807"
+    },
+    "fullDecodeOK": true,
+    "sha256": "c1c54c67e410404d004613be8ba38c2c360c8757d6779a88ea5243843e9b7d50"
+  },
+  {
+    "file": "speech.mp4",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1608,
+        "height": 904,
+        "avg_frame_rate": "30/1",
+        "duration": "15.366667"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "avg_frame_rate": "0/0",
+        "duration": "15.350000"
+      }
+    ],
+    "format": {
+      "duration": "15.366667",
+      "size": "8004290"
+    },
+    "fullDecodeOK": true,
+    "sha256": "33f8868b1c7197d37a4e2afc350ea78f4b8d7e3e6c96d1929a26b7b18ba5da88"
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "file": "city-mobile.mp4",
+    "bytes": 4396781,
+    "sha256": "8d3234e5144171841a43baf33fe4f776122c2f18612726cd0f3b934e6aa90439"
+  },
+  {
+    "file": "city-poster.webp",
+    "bytes": 159602,
+    "sha256": "ac79722e590b9a9d715036547358df54192484b34d426becf1316240a3657073"
+  },
+  {
+    "file": "city.mp4",
+    "bytes": 8255053,
+    "sha256": "3a351163290e5f02b685fe70647b7255fa9a529ea064b9b4000bf4059355014b"
+  },
+  {
+    "file": "earth-mobile.mp4",
+    "bytes": 1380390,
+    "sha256": "89d76e8b9aa8c48830b2415c1a57cf6044f6882695ddb3dd0ffae909459e7b75"
+  },
+  {
+    "file": "earth-poster.webp",
+    "bytes": 79828,
+    "sha256": "b8db629fd66f112ee093d5ede4bb2575d57d0705827eda56083f7ca26c6a140e"
+  },
+  {
+    "file": "earth.mp4",
+    "bytes": 3360884,
+    "sha256": "2d33cbd89f04b9dc73272a94e77b3aa9496dcad8e0423a72b5b15169106224e8"
+  },
+  {
+    "file": "fashion-mobile.mp4",
+    "bytes": 1644923,
+    "sha256": "69e9529c14e5bb94a1206c3dcbaa1ea9a9a534d5ea6d1c1918bc6924060b3083"
+  },
+  {
+    "file": "fashion-poster.webp",
+    "bytes": 36850,
+    "sha256": "c7c7c0c8dd608abde03df854ce1675a376808ac63411fa97b60fce830e7e74b7"
+  },
+  {
+    "file": "fashion.mp4",
+    "bytes": 2471142,
+    "sha256": "15ddfb893206d1ddc323abc964e9d7fae3a2a1ca7855c3303d9bc19273ecebb5"
+  },
+  {
+    "file": "finale-mobile.mp4",
+    "bytes": 3651493,
+    "sha256": "3c3a674d84f481600e14a9682ea21a1baf7d2b592ed7977ee555cc78af7e6340"
+  },
+  {
+    "file": "finale-poster.webp",
+    "bytes": 78520,
+    "sha256": "db3f8e6729df61418e73d2da952342d1077726b853e6c893c25eeabcff4cd7c8"
+  },
+  {
+    "file": "finale.mp4",
+    "bytes": 7799293,
+    "sha256": "6548a8881dab5a357d3eb9600f5d31b1aa983077d1be9d5cef363e191a9e8358"
+  },
+  {
+    "file": "future-mobile.mp4",
+    "bytes": 2266315,
+    "sha256": "5e03c32f017ad07924e5fbcbe184c174f1a9b81b4148c30953cb4132ba18dd13"
+  },
+  {
+    "file": "future-poster.webp",
+    "bytes": 91340,
+    "sha256": "f0132667f1390beb7d5f582c6cfe890897e24b5f490a9c0b3fba85907622230b"
+  },
+  {
+    "file": "future.mp4",
+    "bytes": 5622639,
+    "sha256": "ad11e686831e1913cc5ae3193e6501e9e23551836416bbdf0e523c4f588cba54"
+  },
+  {
+    "file": "nature-mobile.mp4",
+    "bytes": 1276201,
+    "sha256": "153996be74bb0191b47304c80ac4228ebdae361367fe952916729456b2302bee"
+  },
+  {
+    "file": "nature-poster.webp",
+    "bytes": 102436,
+    "sha256": "1f64d668991724d8ee82f8ead5185cf7fb58438ec46557c2256e472308e3946e"
+  },
+  {
+    "file": "nature.mp4",
+    "bytes": 3591219,
+    "sha256": "7b714c8ffc54c65ceb5a9e8e26d23fdfdb9107987f94d2364be5f7452b29a044"
+  },
+  {
+    "file": "speech-mobile.mp4",
+    "bytes": 5521807,
+    "sha256": "c1c54c67e410404d004613be8ba38c2c360c8757d6779a88ea5243843e9b7d50"
+  },
+  {
+    "file": "speech-poster.webp",
+    "bytes": 108624,
+    "sha256": "1566a50a2a1a9a5b5170c010380cc2f5264a197702acb750c86dc47327d69609"
+  },
+  {
+    "file": "speech.mp4",
+    "bytes": 8004290,
+    "sha256": "33f8868b1c7197d37a4e2afc350ea78f4b8d7e3e6c96d1929a26b7b18ba5da88"
+  }
+]

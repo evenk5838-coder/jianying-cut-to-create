@@ -1,0 +1,167 @@
+[
+  {
+    "name": "earth",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 3840,
+        "height": 2160,
+        "avg_frame_rate": "24000/1001"
+      }
+    ],
+    "format": {
+      "duration": "97.222122",
+      "size": "112793370"
+    },
+    "sha256": "2a1a22185d14ca07176e6c2d071874ab5a091d4687ebd502316161136f560362"
+  },
+  {
+    "name": "nature",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 3840,
+        "height": 2160,
+        "avg_frame_rate": "60000/1001"
+      }
+    ],
+    "format": {
+      "duration": "18.551867",
+      "size": "223045619"
+    },
+    "sha256": "22bf0887e20441fbe46d209d5f94a2d88afbdd83c7c1f02df24f85736ea8c551"
+  },
+  {
+    "name": "fashion",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 2732,
+        "height": 1440,
+        "avg_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "9.080000",
+      "size": "14315915"
+    },
+    "sha256": "1ce2673a191f52481f7a19af18e9b54d6a4ab1de9566e334257115187f6eb22b"
+  },
+  {
+    "name": "speech",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1608,
+        "height": 1080,
+        "avg_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "avg_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "206.378333",
+      "size": "149138848"
+    },
+    "sha256": "3623f849045ca360e63ebbd863e499b7e08dd082b51fd06da86484ab55eb9a3a"
+  },
+  {
+    "name": "tokyo",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 2562,
+        "height": 1440,
+        "avg_frame_rate": "30000/1001"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "avg_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "17.620000",
+      "size": "30486204"
+    },
+    "sha256": "2d47ef30465f969c8d52ed03afd9fcdceaa825044a1cb4ff362f95aad9396173"
+  },
+  {
+    "name": "street",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 1,
+        "avg_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "10.281667",
+      "size": "6573624"
+    },
+    "sha256": "4ada11f0ff95272996fcedef7ccd200b555f22995e851d4fb371f58293a95b35"
+  },
+  {
+    "name": "city",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 3840,
+        "height": 2160,
+        "avg_frame_rate": "30000/1001"
+      }
+    ],
+    "format": {
+      "duration": "15.015000",
+      "size": "81696592"
+    },
+    "sha256": "4f8b42f0365c05c70e8dcce78c10aaee0413af390475b387df73d32c39778ba7"
+  },
+  {
+    "name": "future",
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 3840,
+        "height": 2160,
+        "avg_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "41.600000",
+      "size": "151389365"
+    },
+    "sha256": "b57c33d3a5db6bc9f37d75cb8e733fe4c7cb1cc9a3b65c58d916e020ba79fa0e"
+  }
+]

@@ -1,0 +1,168 @@
+{
+  "date": "2026-09-24T11:18:21.494Z",
+  "browser": "153.0.8010.53",
+  "conditions": "Apple M1 Pro, 16 GB; production preview. Mobile = viewport/touch/4x CPU emulation, not physical hardware.",
+  "runs": [
+    {
+      "name": "desktop",
+      "elapsedMs": 14029.699999988079,
+      "rafFps": 59.87298374168469,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.700000000000728,
+      "over33ms": 0,
+      "maxPlaying": 1,
+      "maxLoaded": 2,
+      "maxCopies": 1,
+      "initialRequests": [
+        {
+          "url": "index-CuyG-UA1.js",
+          "bytes": 98075
+        },
+        {
+          "url": "motion-xgxdCp6f.js",
+          "bytes": 27829
+        },
+        {
+          "url": "index-BrRLcrn3.css",
+          "bytes": 4249
+        },
+        {
+          "url": "earth-poster.webp",
+          "bytes": 80128
+        },
+        {
+          "url": "favicon.svg",
+          "bytes": 529
+        },
+        {
+          "url": "earth.mp4",
+          "bytes": 3361184
+        }
+      ],
+      "longTasks": [],
+      "canvases": 0,
+      "videoQuality": [
+        {
+          "name": "earth",
+          "total": 4,
+          "dropped": 0
+        },
+        {
+          "name": "nature",
+          "total": 0,
+          "dropped": 0
+        },
+        {
+          "name": "fashion",
+          "total": 0,
+          "dropped": 0
+        },
+        {
+          "name": "speech",
+          "total": 0,
+          "dropped": 0
+        },
+        {
+          "name": "city",
+          "total": 0,
+          "dropped": 0
+        },
+        {
+          "name": "future",
+          "total": 0,
+          "dropped": 0
+        },
+        {
+          "name": "finale",
+          "total": 0,
+          "dropped": 0
+        }
+      ]
+    },
+    {
+      "name": "mobile-4x-cpu",
+      "elapsedMs": 14031.79999999702,
+      "rafFps": 59.93528984165813,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.700000000000728,
+      "over33ms": 0,
+      "maxPlaying": 1,
+      "maxLoaded": 2,
+      "maxCopies": 1,
+      "initialRequests": [
+        {
+          "url": "index-CuyG-UA1.js",
+          "bytes": 98075
+        },
+        {
+          "url": "index-BrRLcrn3.css",
+          "bytes": 4249
+        },
+        {
+          "url": "motion-xgxdCp6f.js",
+          "bytes": 27829
+        },
+        {
+          "url": "earth-poster.webp",
+          "bytes": 80128
+        },
+        {
+          "url": "favicon.svg",
+          "bytes": 529
+        },
+        {
+          "url": "earth-mobile.mp4",
+          "bytes": 1380690
+        }
+      ],
+      "longTasks": [
+        {
+          "start": 44.5,
+          "duration": 66
+        },
+        {
+          "start": 154.70000000298023,
+          "duration": 123
+        }
+      ],
+      "canvases": 0,
+      "videoQuality": [
+        {
+          "name": "earth",
+          "total": 4,
+          "dropped": 0
+        },
+        {
+          "name": "nature",
+          "total": 0,
+          "dropped": 0
+        },
+        {
+          "name": "fashion",
+          "total": 0,
+          "dropped": 0
+        },
+        {
+          "name": "speech",
+          "total": 0,
+          "dropped": 0
+        },
+        {
+          "name": "city",
+          "total": 0,
+          "dropped": 0
+        },
+        {
+          "name": "future",
+          "total": 0,
+          "dropped": 0
+        },
+        {
+          "name": "finale",
+          "total": 0,
+          "dropped": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "network": "4 Mbps / 150 ms RTT / cold cache",
+  "results": [
+    {
+      "mobile": false,
+      "lcpMs": 660,
+      "videoReadyMs": 1343.9000000059605,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 340
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 660
+        }
+      ],
+      "resources": [
+        {
+          "url": "index-BLkxf0UZ.js",
+          "bytes": 98077
+        },
+        {
+          "url": "index-BRI8mTPj.css",
+          "bytes": 4255
+        },
+        {
+          "url": "motion-xgxdCp6f.js",
+          "bytes": 27829
+        },
+        {
+          "url": "earth-poster.webp",
+          "bytes": 80128
+        },
+        {
+          "url": "favicon.svg",
+          "bytes": 529
+        }
+      ],
+      "sourceCount": 1
+    },
+    {
+      "mobile": true,
+      "lcpMs": 648,
+      "videoReadyMs": 1139,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 340
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 648
+        }
+      ],
+      "resources": [
+        {
+          "url": "index-BLkxf0UZ.js",
+          "bytes": 98077
+        },
+        {
+          "url": "index-BRI8mTPj.css",
+          "bytes": 4255
+        },
+        {
+          "url": "motion-xgxdCp6f.js",
+          "bytes": 27829
+        },
+        {
+          "url": "earth-poster.webp",
+          "bytes": 80128
+        },
+        {
+          "url": "favicon.svg",
+          "bytes": 529
+        }
+      ],
+      "sourceCount": 1
+    }
+  ]
+}
