@@ -1,0 +1,118 @@
+{
+  "url": "https://jianying-cut-to-create.evenk5838.chatgpt.site/",
+  "date": "2026-09-24T16:13:05.842Z",
+  "browser": "153.0.8010.53",
+  "anonymous": true,
+  "runs": [
+    {
+      "mode": "desktop",
+      "media": [
+        {
+          "scene": "city",
+          "time": 0.019343,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/city.mp4",
+          "width": 1920,
+          "height": 1080,
+          "loop": true
+        },
+        {
+          "scene": "speech",
+          "time": 0.016088,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/speech.mp4",
+          "width": 1608,
+          "height": 904,
+          "loop": true
+        },
+        {
+          "scene": "fashion",
+          "time": 0.013007,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/fashion.mp4",
+          "width": 1920,
+          "height": 1080,
+          "loop": true
+        },
+        {
+          "scene": "nature",
+          "time": 0.009807,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/nature.mp4",
+          "width": 1920,
+          "height": 1080,
+          "loop": true
+        },
+        {
+          "scene": "future",
+          "time": 0.015143,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/future.mp4",
+          "width": 1920,
+          "height": 1080,
+          "loop": true
+        },
+        {
+          "scene": "finale",
+          "time": 0.012165,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/finale.mp4",
+          "width": 1920,
+          "height": 1080,
+          "loop": true
+        }
+      ],
+      "checks": "anonymous 200, opening, five matching details and return, finale loop, bidirectional transitions, max two playing videos, actual music and speech duck/restore/off, no horizontal overflow",
+      "errors": []
+    },
+    {
+      "mode": "mobile-emulation",
+      "media": [
+        {
+          "scene": "city",
+          "time": 0.017717,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/city-mobile.mp4",
+          "width": 721,
+          "height": 1280,
+          "loop": true
+        },
+        {
+          "scene": "speech",
+          "time": 0.019559,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/speech-mobile.mp4",
+          "width": 720,
+          "height": 1281,
+          "loop": true
+        },
+        {
+          "scene": "fashion",
+          "time": 0.0136,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/fashion-mobile.mp4",
+          "width": 720,
+          "height": 1280,
+          "loop": true
+        },
+        {
+          "scene": "nature",
+          "time": 0.004728,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/nature-mobile.mp4",
+          "width": 721,
+          "height": 1280,
+          "loop": true
+        },
+        {
+          "scene": "future",
+          "time": 0.011148,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/future-mobile.mp4",
+          "width": 721,
+          "height": 1280,
+          "loop": true
+        },
+        {
+          "scene": "finale",
+          "time": 0.010189,
+          "src": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/3cd8876e21a469bb7c1c0b44a84902528c74fdf6/public/media/finale-mobile.mp4",
+          "width": 1280,
+          "height": 720,
+          "loop": true
+        }
+      ],
+      "checks": "anonymous 200, opening, five matching details and return, finale loop, bidirectional transitions, max two playing videos, actual music and speech duck/restore/off, no horizontal overflow",
+      "errors": []
+    }
+  ]
+}

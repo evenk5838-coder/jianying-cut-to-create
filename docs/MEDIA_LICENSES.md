@@ -1,6 +1,6 @@
 ## 当前结尾（用户确认接入）
 
-结尾采用已展示的「人物 → 海岸 → 城市 → 建筑」约 18 秒混剪，替代重复地球及候选占位。四条原素材及作者、链接、规格、Pexels 许可见 [素材来源](MEDIA_CANDIDATES.md) 和 `public/review-media/catalog.json` 的 human、coast、montage-city、architecture 记录。无素材原声，沿用网站配乐；第三方素材不适用代码 MIT 许可。桌面采用确认过的 1920×1080 混剪，轻量版为同一横屏构图的 1280×720 转码。
+结尾采用已展示的「人物 → 海岸 → 城市 → 建筑」约 18 秒混剪，替代重复地球及候选占位。四条原素材及作者、链接、规格、Pexels 许可见 [素材来源](MEDIA_CANDIDATES.md) 和 `docs/release/media-catalog.json` 的 human、coast、montage-city、architecture 记录。无素材原声，沿用网站配乐；第三方素材不适用代码 MIT 许可。桌面采用确认过的 1920×1080 混剪，轻量版为同一横屏构图的 1280×720 转码。
 
 # 素材来源与授权清单
 
