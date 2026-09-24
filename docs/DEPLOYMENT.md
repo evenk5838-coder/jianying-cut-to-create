@@ -1,6 +1,6 @@
 # 运行、部署与音乐配置
 
-本站是 React + Vite 静态应用，无后端、登录、数据库或 AI 服务端密钥。构建产物是 `dist/`。以下是可执行的部署方法，不表示这些平台已完成发布。
+本站是 React + Vite 静态应用，无后端、登录、数据库或 AI 服务端密钥。构建产物是 `dist/`。当前正式站已部署至 Sites 并开放为 public：[打开网站](https://jianying-cut-to-create.evenk5838.chatgpt.site)。[GitHub 公开仓库](https://github.com/evenk5838-coder/jianying-cut-to-create)保存代码与独立授权影像，用户音乐只随网站部署提供。下列 GitHub Pages、Netlify、Vercel 是备用部署方法，并非已另行发布的平台。
 
 ## 本地构建
 

@@ -1,0 +1,228 @@
+{
+  "url": "https://jianying-cut-to-create.evenk5838.chatgpt.site",
+  "date": "2026-09-24T12:05:26.651Z",
+  "browser": "153.0.8010.53",
+  "authenticated": false,
+  "runs": [
+    {
+      "mobile": false,
+      "httpStatus": 200,
+      "videos": [
+        {
+          "id": "earth",
+          "width": 1920,
+          "height": 1082,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/earth.mp4"
+        },
+        {
+          "id": "nature",
+          "width": 1920,
+          "height": 1080,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/nature.mp4",
+          "detailTitle": "关键帧、蒙版与调色"
+        },
+        {
+          "id": "fashion",
+          "width": 1920,
+          "height": 1080,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/fashion.mp4",
+          "detailTitle": "智能抠像"
+        },
+        {
+          "id": "speech",
+          "width": 1608,
+          "height": 904,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/speech.mp4",
+          "detailTitle": "智能剪口播"
+        },
+        {
+          "id": "city",
+          "width": 1920,
+          "height": 1080,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/city.mp4",
+          "detailTitle": "智能搜索素材与多时间线"
+        },
+        {
+          "id": "future",
+          "width": 1920,
+          "height": 1080,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/future.mp4",
+          "detailTitle": "视频生成"
+        },
+        {
+          "id": "finale",
+          "width": 1920,
+          "height": 1080,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/finale.mp4"
+        }
+      ],
+      "music": {
+        "paused": false,
+        "time": 0.163686,
+        "volume": 0.12,
+        "src": "https://jianying-cut-to-create.evenk5838.chatgpt.site/media/private-soundtrack.mp3"
+      },
+      "closedAfterToggle": true,
+      "errors": [],
+      "failed": [],
+      "mediaResponses": [
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/earth.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/nature.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/fashion.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/speech.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/city.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/future.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/finale.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/speech.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://jianying-cut-to-create.evenk5838.chatgpt.site/media/private-soundtrack.mp3",
+          "status": 200
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "mobile": true,
+      "httpStatus": 200,
+      "videos": [
+        {
+          "id": "earth",
+          "width": 720,
+          "height": 1281,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/earth-mobile.mp4"
+        },
+        {
+          "id": "nature",
+          "width": 721,
+          "height": 1280,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/nature-mobile.mp4",
+          "detailTitle": "关键帧、蒙版与调色"
+        },
+        {
+          "id": "fashion",
+          "width": 721,
+          "height": 1280,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/fashion-mobile.mp4",
+          "detailTitle": "智能抠像"
+        },
+        {
+          "id": "speech",
+          "width": 720,
+          "height": 1281,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/speech-mobile.mp4",
+          "detailTitle": "智能剪口播"
+        },
+        {
+          "id": "city",
+          "width": 721,
+          "height": 1280,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/city-mobile.mp4",
+          "detailTitle": "智能搜索素材与多时间线"
+        },
+        {
+          "id": "future",
+          "width": 721,
+          "height": 1280,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/future-mobile.mp4",
+          "detailTitle": "视频生成"
+        },
+        {
+          "id": "finale",
+          "width": 721,
+          "height": 1280,
+          "ready": 4,
+          "currentSrc": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/finale-mobile.mp4"
+        }
+      ],
+      "music": {
+        "paused": false,
+        "time": 0.1631,
+        "volume": 0.12,
+        "src": "https://jianying-cut-to-create.evenk5838.chatgpt.site/media/private-soundtrack.mp3"
+      },
+      "closedAfterToggle": true,
+      "errors": [],
+      "failed": [],
+      "mediaResponses": [
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/earth-mobile.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/nature-mobile.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/fashion-mobile.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/speech-mobile.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/city-mobile.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/future-mobile.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/finale-mobile.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/speech-mobile.mp4",
+          "status": 206
+        },
+        {
+          "url": "https://jianying-cut-to-create.evenk5838.chatgpt.site/media/private-soundtrack.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://raw.githubusercontent.com/evenk5838-coder/jianying-cut-to-create/f7d4342db32eea6ece91523789ca134a2c1b9178/public/media/earth-mobile.mp4",
+          "status": 206
+        }
+      ],
+      "overflow": false
+    }
+  ]
+}
