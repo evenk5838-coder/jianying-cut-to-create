@@ -1,0 +1,18 @@
+[
+  {
+    "mobile": false,
+    "identicalScreenshot": true,
+    "hashes": [
+      "56d4c26931fd5d3e613286a8d7faedead24c3703fb388f3c50f1fb9ff7ada1ac",
+      "56d4c26931fd5d3e613286a8d7faedead24c3703fb388f3c50f1fb9ff7ada1ac"
+    ]
+  },
+  {
+    "mobile": true,
+    "identicalScreenshot": true,
+    "hashes": [
+      "26ef77762d53ecfb7f2f484d77394d3121ccd8185adc7af218f03b612d52ef13",
+      "26ef77762d53ecfb7f2f484d77394d3121ccd8185adc7af218f03b612d52ef13"
+    ]
+  }
+]

@@ -1,3 +1,4 @@
+import { clockProgress } from "../src/lib/sequence";
 import { test, expect } from "@playwright/test";
 test("blocked autoplay offers one-click music and remembers switch-off", async ({
   page,
@@ -35,17 +36,16 @@ test("missing music leaves film and feature details usable", async ({
   await page.getByRole("button", { name: "开启背景音乐", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("页面仍可正常浏览");
   await page.getByRole("button", { name: "关闭声音设置" }).click();
-  await page.evaluate(() =>
-    scrollTo(
-      0,
-      (((document.querySelector(".film-journey") as HTMLElement).offsetHeight -
-        innerHeight) *
-        1.25) /
-        6.65,
-    ),
+  await page.evaluate(
+    (p) =>
+      scrollTo(
+        0,
+        ((document.querySelector(".film-journey") as HTMLElement).offsetHeight -
+          innerHeight) *
+          p,
+      ),
+    clockProgress(1.52, false),
   );
-  await page.locator(".copy-nature .capability-link").click();
-  await expect(
-    page.getByRole("heading", { name: "关键帧、蒙版与调色", exact: true }),
-  ).toBeVisible();
+  await page.locator(".copy-city .capability-link").click();
+  await expect(page.locator("#detail-title")).toBeVisible();
 });

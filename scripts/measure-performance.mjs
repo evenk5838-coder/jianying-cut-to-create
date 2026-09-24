@@ -39,7 +39,7 @@ for (const cfg of [
       ),
     ).observe({ type: "longtask", buffered: true });
   });
-  await page.goto("http://127.0.0.1:4173/");
+  await page.goto("http://127.0.0.1:4174/");
   await page.waitForFunction(
     () => document.querySelector("video").readyState >= 3,
   );
@@ -119,7 +119,7 @@ for (const cfg of [
   await context.close();
 }
 fs.writeFileSync(
-  "docs/qa/revision/performance.json",
+  "docs/qa/feature-preview/performance.json",
   JSON.stringify(results, null, 2),
 );
 await browser.close();

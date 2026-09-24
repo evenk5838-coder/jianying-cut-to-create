@@ -128,3 +128,12 @@ Pexels 影像适用 [Pexels License](https://www.pexels.com/license/)。NASA Joh
 ## 构建工具
 
 Vite / React Vite 插件：MIT。TypeScript 与 Playwright：Apache-2.0。类型声明遵循其安装包许可。node_modules 不进入仓库，保留 package-lock.json 与依赖包原有 LICENSE / NOTICE。FFmpeg 与本地 Whisper 仅作为制作、校验工具，未把可执行程序或模型打包进网站。
+
+## 独立预览新增视频
+
+public/review-media 中的视频和静帧来自 Pexels 作者，适用 Pexels License，不属于 MIT 代码授权。逐项作者、原页、实际规格与剪辑关系见 docs/MEDIA_CANDIDATES.md。montage.mp4 是上述素材的独立编排，不表示取得底层素材的再许可权。所有候选等待用户确认，未发布。
+
+
+## 独立预览：人像候选 P5—P9
+
+`public/review-portraits/` 的视频及衍生缩略图不受 MIT 许可覆盖；各自适用 Pexels License 或 Mixkit Stock Video Free License。逐项来源、实际规格、使用范围见 [人像候选清单](docs/PORTRAIT_CANDIDATES_R3.md)。仅用于待确认的独立预览，未接入或发布正式网站。

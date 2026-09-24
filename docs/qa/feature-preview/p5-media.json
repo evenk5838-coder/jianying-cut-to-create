@@ -1,0 +1,22 @@
+[
+  {
+    "file": "fashion.mp4",
+    "bytes": 5149587,
+    "sha256": "0554d850c8b52a48e32e94039257bd128c2a1a4c8000db43b6f2e3373aa53c73"
+  },
+  {
+    "file": "fashion-mobile.mp4",
+    "bytes": 2648977,
+    "sha256": "07ee53210620024424c46fd6e9aa6f729928515636cd209b8b52a70eb1c976d1"
+  },
+  {
+    "file": "fashion-lite.mp4",
+    "bytes": 1442198,
+    "sha256": "5036169c23a6985dd2c16f97c699bedbce6fc62ac28b702dbb8dee3ad1605e10"
+  },
+  {
+    "file": "fashion-poster.webp",
+    "bytes": 32674,
+    "sha256": "9518ec2f9dd56d3620829ea6829b496399649216f1e9c4919ba7facd5e37ace9"
+  }
+]

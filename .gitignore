@@ -10,3 +10,5 @@ playwright-report/
 public/media/private-*
 *.tsbuildinfo
 deliverables/
+
+node_modules

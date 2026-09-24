@@ -35,7 +35,7 @@ for (const mobile of [false, true]) {
       true,
     );
   });
-  await page.goto("http://127.0.0.1:4173/");
+  await page.goto("http://127.0.0.1:4174/");
   await page.waitForFunction(() => window.__videoReady > 0, { timeout: 30000 });
   await page.waitForTimeout(500);
   const result = await page.evaluate(() => ({
@@ -61,7 +61,7 @@ for (const mobile of [false, true]) {
   await context.close();
 }
 fs.writeFileSync(
-  "docs/qa/revision/load.json",
+  "docs/qa/feature-preview/load.json",
   JSON.stringify(
     { network: "4 Mbps / 150 ms RTT / cold cache", results },
     null,

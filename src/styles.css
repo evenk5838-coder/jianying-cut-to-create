@@ -340,7 +340,13 @@ h4 {
   margin-top: 22px;
 }
 .copy-fashion {
-  bottom: 23vh;
+  bottom: 18vh;
+  left: auto;
+  right: var(--gutter);
+  max-width: 480px;
+}
+.copy-fashion h2 {
+  font-size: clamp(44px, 4.3vw, 76px);
 }
 .copy-speech {
   bottom: 24vh;
@@ -355,7 +361,7 @@ h4 {
 .voice-toggle {
   margin-top: 25px;
 }
-.film-stage[data-scene="3"] .film-scrim {
+.film-stage[data-scene="2"] .film-scrim {
   background:
     linear-gradient(
       90deg,
@@ -824,7 +830,7 @@ dialog::backdrop {
       #03080c60
     );
   }
-  .film-stage[data-scene="3"] .film-scrim {
+  .film-stage[data-scene="2"] .film-scrim {
     background: linear-gradient(
       0deg,
       #03080cf5,
@@ -1209,4 +1215,194 @@ dialog::backdrop {
   background: #080c0fd9;
   font-size: 11px;
   color: #edf1f3;
+}
+
+/* Preview revision: keep all opening selectors unchanged. */
+.feature-copy {
+  max-width: 650px;
+  bottom: 20vh;
+  padding: 28px 30px;
+  margin-left: -30px;
+  isolation: isolate;
+}
+.feature-copy::before {
+  content: "";
+  position: absolute;
+  inset: 0 -40px 0 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 13, 18, 0.7),
+    rgba(6, 13, 18, 0.5) 75%,
+    transparent
+  );
+  border-radius: 4px;
+  pointer-events: none;
+}
+.feature-copy .eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  margin-bottom: 18px;
+}
+.feature-copy h2 {
+  font-size: clamp(42px, 4.5vw, 76px);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+}
+.feature-copy .scene-description {
+  font-size: 16px;
+  line-height: 1.85;
+  max-width: 550px;
+  margin-top: 24px;
+  opacity: var(--description-opacity, 0);
+  visibility: var(--description-visibility, hidden);
+}
+.feature-copy .scene-benefit {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #d5dfe5;
+  margin-top: 12px;
+  max-width: 510px;
+  opacity: var(--benefit-opacity, 0);
+  visibility: var(--benefit-visibility, hidden);
+}
+.feature-copy .capability-link,
+.feature-copy .voice-actions,
+.feature-copy .grade-toggle {
+  opacity: var(--actions-opacity, 0);
+  visibility: var(--actions-visibility, hidden);
+}
+.feature-copy .voice-actions .capability-link {
+  opacity: 1;
+  visibility: inherit;
+}
+.feature-copy .voice-actions {
+  gap: 20px;
+  margin-top: 24px;
+}
+.feature-copy .voice-toggle {
+  margin-top: 0;
+}
+.grade-toggle {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 16px;
+  padding: 0;
+  font-size: 12px;
+  color: #fff;
+}
+.grade-toggle span {
+  font-size: 11px;
+  color: #c1cbd1;
+}
+.grade-toggle[aria-pressed="true"] {
+  color: #ffadb8;
+}
+.film-nature .film-picture {
+  transition: filter 0.5s ease;
+}
+.film-nature .film-picture.is-graded {
+  filter: contrast(1.08) saturate(1.15) sepia(0.08);
+}
+.film-finale {
+  background: radial-gradient(ellipse at 75% 30%, #18323b, #080c0f 70%);
+}
+.speech-caption {
+  bottom: 11vh;
+}
+@media (max-width: 760px) {
+  .feature-copy {
+    left: 24px;
+    bottom: 145px;
+    margin-left: -18px;
+    padding: 22px 18px;
+    max-width: calc(100% - 48px);
+  }
+  .feature-copy::before {
+    inset: 0 -18px 0 0;
+    background: linear-gradient(90deg, #060d12c9, #060d128f 80%, transparent);
+  }
+  .feature-copy h2 {
+    font-size: clamp(30px, 8.5vw, 39px);
+    line-height: 1.2;
+  }
+  .feature-copy .eyebrow {
+    font-size: 10px;
+    margin-bottom: 14px;
+  }
+  .feature-copy .scene-description {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 18px;
+    max-width: none;
+  }
+  .feature-copy .scene-benefit {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top: 10px;
+  }
+  .feature-copy .voice-actions {
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .feature-copy .capability-link {
+    margin-top: 12px;
+  }
+  .feature-copy .voice-actions .capability-link {
+    margin-top: 0;
+  }
+  .speech-caption {
+    font-size: 12px;
+    bottom: 86px;
+    max-width: calc(100% - 36px);
+  }
+}
+@media (max-height: 700px) and (max-width: 760px) {
+  .feature-copy {
+    bottom: 116px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .feature-copy h2 {
+    font-size: 29px;
+  }
+  .feature-copy .scene-description {
+    margin-top: 12px;
+  }
+  .feature-copy .eyebrow {
+    margin-bottom: 10px;
+  }
+  .feature-copy .scene-benefit {
+    margin-top: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .film-nature .film-picture {
+    transition: none;
+  }
+}
+
+.feature-copy::before {
+  mask-image: linear-gradient(
+    180deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+/* Stable scroll anchoring when an in-place audio label changes. */
+.film-journey {
+  overflow-anchor: none;
+}
+.feature-copy .voice-toggle {
+  min-width: 174px;
+}
+
+/* P5: leave the face clear while preserving the feature typography. */
+.feature-copy.copy-fashion { max-width: 480px; }
+@media (max-width: 760px) {
+  .feature-copy.copy-fashion { max-width: calc(100% - 48px); bottom: 105px; }
 }

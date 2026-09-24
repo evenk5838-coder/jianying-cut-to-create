@@ -10,8 +10,22 @@ import {
   Volume2,
   VolumeX,
 } from "lucide-react";
-import { scenes, media, official, type FeatureId } from "../content";
-import { END, sequence, copyOpacity, ramp } from "../lib/sequence";
+import {
+  scenes,
+  media,
+  official,
+  type FeatureId,
+  speechIndex,
+} from "../content";
+import {
+  sequence,
+  copyOpacity,
+  ramp,
+  textPhase,
+  scrollClock,
+  clockProgress,
+  journeyHeight,
+} from "../lib/sequence";
 gsap.registerPlugin(ScrollTrigger);
 // Reassigning even identical styles on video ancestors can invalidate compositing.
 function paint(element: HTMLElement, values: Record<string, string>) {
@@ -56,8 +70,9 @@ export default function FilmStage({
     active = useRef(0),
     scrollEnd = useRef(1),
     mediaKey = useRef("");
-  const scrolling = useRef(false),
-    settleTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const smallScreen = useRef(matchMedia("(max-width: 760px)").matches);
+  const playRequests = useRef(new Set<number>());
+  const [graded, setGraded] = useState(false);
   const paused = useRef(reduced),
     [isPaused, setPaused] = useState(reduced);
   const voice = useRef(false),
@@ -65,17 +80,14 @@ export default function FilmStage({
   const [current, setCurrent] = useState(0),
     [line, setLine] = useState(""),
     [mediaError, setMediaError] = useState("");
-  const [playingFinal, setPlayingFinal] = useState(false),
-    [ended, setEnded] = useState(false);
-  const hasFinalPlayed = useRef(false);
+  const [ended, setEnded] = useState(false);
   const currentLabel = scenes[current].label;
 
   // Never starts audible playback implicitly. The original speech lives in the same video.
   const stopVoice = () => {
-    const v = videos.current[3];
+    const v = videos.current[speechIndex];
     if (v) {
       v.muted = true;
-      v.pause();
     }
     voice.current = false;
     setVoicePlaying(false);
@@ -92,16 +104,21 @@ export default function FilmStage({
         visible.includes(i) &&
         !document.hidden &&
         !suspendedRef.current &&
-        !paused.current &&
-        (!scrolling.current || (i === 3 && voice.current)) &&
-        (i !== 3 || voice.current) &&
-        (i !== 6 || hasFinalPlayed.current);
-      if (play && v.src && v.paused && !v.ended)
-        void v.play().catch(() => {
-          if (i === 3) stopVoice();
-          if (i === 6) setPlayingFinal(false);
-        });
-      else if (!play && !v.paused) v.pause();
+        !paused.current;
+      if (
+        play &&
+        v.getAttribute("src") &&
+        v.paused &&
+        !playRequests.current.has(i)
+      ) {
+        playRequests.current.add(i);
+        void v
+          .play()
+          .catch(() => {
+            if (i === speechIndex) stopVoice();
+          })
+          .finally(() => playRequests.current.delete(i));
+      } else if (!play && !v.paused) v.pause();
     });
   };
   useEffect(() => {
@@ -117,7 +134,6 @@ export default function FilmStage({
       paused.current = false;
       setPaused(false);
       setEnded(false);
-      if (active.current === 6) hasFinalPlayed.current = true;
       syncPlayback();
       return;
     }
@@ -127,7 +143,7 @@ export default function FilmStage({
     syncPlayback();
   };
   const speak = async () => {
-    const v = videos.current[3];
+    const v = videos.current[speechIndex];
     if (!v) return;
     if (voice.current) {
       stopVoice();
@@ -135,38 +151,21 @@ export default function FilmStage({
     }
     v.muted = false;
     v.volume = 0.85;
-    v.currentTime = 0;
     paused.current = false;
     setPaused(false);
     voice.current = true;
     try {
       await v.play();
+      setVoicePlaying(true);
+      onVoice(true);
     } catch {
       stopVoice();
       setMediaError("原声未能播放，请再点一次「听人物原声」。");
     }
   };
-  const playFinal = async () => {
-    const v = videos.current[6];
-    if (!v) return;
-    if (!v.paused) {
-      v.pause();
-      setPlayingFinal(false);
-      return;
-    }
-    if (v.ended || !hasFinalPlayed.current) v.currentTime = 0;
-    hasFinalPlayed.current = true;
-    paused.current = false;
-    setPaused(false);
-    try {
-      await v.play();
-    } catch {
-      setMediaError("短片未能播放，请重试。");
-    }
-  };
   const go = (x: number) =>
     window.scrollTo({
-      top: (x / END) * scrollEnd.current,
+      top: clockProgress(x, smallScreen.current) * scrollEnd.current,
       behavior: reduced ? "instant" : "smooth",
     });
 
@@ -175,7 +174,7 @@ export default function FilmStage({
     setPaused(reduced);
     mediaKey.current = "";
     const update = (progress: number) => {
-      const x = progress * END;
+      const x = scrollClock(progress, smallScreen.current);
       clock.current = x;
       const s = sequence(x),
         t = reduced ? (s.mix >= 0.5 ? 1 : 0) : s.mix;
@@ -185,18 +184,22 @@ export default function FilmStage({
         setEnded(false);
         setMediaError("");
       }
-      // Prepare only the approaching shot. Unset distant sources to release decoders.
+      // Prepare only the approaching shot; retain paused sources for smooth reverse travel.
       const needed =
         s.local > (s.from === 0 ? 0.12 : 0.42) && s.from < 6
           ? [s.from, s.to]
           : [s.from];
-      const key = needed.join(",") + lite;
+      const portraitMobile = matchMedia("(max-width: 760px)").matches;
+      const key = needed.join(",") + lite + portraitMobile;
       if (mediaKey.current !== key) {
         mediaKey.current = key;
         videos.current.forEach((v, i) => {
           if (!v) return;
-          if (needed.includes(i)) {
-            const url = media(`${scenes[i].file}${lite ? "-mobile" : ""}.mp4`);
+          if (needed.includes(i) && scenes[i].file) {
+            const variant = scenes[i].id === "fashion"
+              ? (portraitMobile ? "-mobile" : lite ? "-lite" : "")
+              : (lite ? "-mobile" : "");
+            const url = media(`${scenes[i].file}${variant}.mp4`);
             if (v.getAttribute("src") !== url) {
               v.src = url;
               v.load();
@@ -206,8 +209,8 @@ export default function FilmStage({
               picture.style.backgroundImage = `url("${media(scenes[i].file + "-poster.webp")}")`;
           } else if (v.hasAttribute("src")) {
             v.pause();
-            v.removeAttribute("src");
-            v.load();
+            // Keep the visited source and decoded buffer for immediate reverse travel.
+            // Only the visible pair is allowed to play; first visits remain lazy.
           }
         });
       }
@@ -225,11 +228,11 @@ export default function FilmStage({
             transform = `translate${axis}(${(1 - t) * 100}%)`;
             pictureTransform = `translate${axis}(${-(1 - t) * 100}%)`;
           };
-          if (s.from === 0 || s.from === 3) wipe("Y");
+          if (s.from === 0 || s.from === speechIndex) wipe("Y");
           if (s.from === 4) wipe("X");
           if (s.from === 1 || s.from === 5)
             visibility = t < 0.5 ? "hidden" : "visible";
-          if (s.from === 2) {
+          if (s.from === 3) {
             if (lite) wipe("X");
             else {
               clip = "url(#voice-reveal)";
@@ -261,7 +264,16 @@ export default function FilmStage({
           visibility: opacity > 0 ? "visible" : "hidden",
           transform: reduced ? "none" : `translateY(${(1 - opacity) * 12}px)`,
         });
-        if (copy.inert !== opacity < 0.85) copy.inert = opacity < 0.85;
+        for (const phase of ["description", "benefit", "actions"] as const) {
+          const value = textPhase(x, i, phase);
+          paint(copy, {
+            [`--${phase}-opacity`]: String(value),
+            [`--${phase}-visibility`]:
+              value > 0 && opacity > 0 ? "visible" : "hidden",
+          });
+        }
+        const inactive = opacity < 0.85 || textPhase(x, i, "actions") < 0.85;
+        if (copy.inert !== inactive) copy.inert = inactive;
         const hidden = String(opacity === 0);
         if (copy.getAttribute("aria-hidden") !== hidden)
           copy.setAttribute("aria-hidden", hidden);
@@ -280,7 +292,7 @@ export default function FilmStage({
       }
       if (typeMask.current) {
         const opacity =
-          !reduced && s.from === 2 ? Math.sin(t * Math.PI) * 0.28 : 0;
+          !reduced && s.from === 3 ? Math.sin(t * Math.PI) * 0.28 : 0;
         paint(typeMask.current, {
           opacity: String(opacity),
           display: opacity > 0.001 ? "flex" : "none",
@@ -288,15 +300,15 @@ export default function FilmStage({
         });
       }
       if (caption.current) {
-        const isExit = s.from === 3 && s.local > 0.68;
+        const isExit = s.from === speechIndex && s.local > 0.78;
         caption.current.dataset.exiting = String(isExit);
         caption.current.setAttribute(
           "aria-hidden",
-          String(s.current !== 3 && !isExit),
+          String(s.current !== speechIndex && !isExit),
         );
         paint(caption.current, {
           opacity: String(
-            isExit ? 1 - ramp(t, 0.55, 1) : s.current === 3 ? 1 : 0,
+            isExit ? 1 - ramp(t, 0.55, 1) : s.current === speechIndex ? 1 : 0,
           ),
           transform: `translateY(${isExit && !reduced ? -t * 60 : 0}vh)`,
         });
@@ -305,24 +317,23 @@ export default function FilmStage({
       if (stage.current?.dataset.scene !== String(s.current))
         stage.current?.setAttribute("data-scene", String(s.current));
       stage.current?.setAttribute("data-mix", s.mix.toFixed(3));
-      if ((s.from !== 3 || s.mix > 0) && voice.current) stopVoice();
+      if ((s.from !== speechIndex || s.mix > 0) && voice.current) stopVoice();
       syncPlayback();
     };
+    const resize = () => {
+      smallScreen.current = matchMedia("(max-width: 760px)").matches;
+      if (root.current)
+        root.current.style.height = `${journeyHeight(smallScreen.current)}svh`;
+    };
+    resize();
     const trigger = ScrollTrigger.create({
       trigger: root.current,
       start: "top top",
       end: "bottom bottom",
       onUpdate: (self) => {
-        // Hold the last decoded frame while scrolling; resume at a settled position.
-        // This avoids competing video decode/compositing work during the mask movement.
-        scrolling.current = true;
-        clearTimeout(settleTimer.current);
         update(self.progress);
-        settleTimer.current = setTimeout(() => {
-          scrolling.current = false;
-          syncPlayback();
-        }, 140);
       },
+      onRefreshInit: resize,
       onRefresh: (self) => {
         scrollEnd.current = self.end;
         update(self.progress);
@@ -339,8 +350,6 @@ export default function FilmStage({
     document.addEventListener("visibilitychange", visibility);
     return () => {
       trigger.kill();
-      clearTimeout(settleTimer.current);
-      scrolling.current = false;
       document.removeEventListener("visibilitychange", visibility);
       videos.current.forEach((v) => v?.pause());
     };
@@ -355,7 +364,7 @@ export default function FilmStage({
       aria-label="创作影像之旅"
     >
       <div
-        className={`film-stage ${playingFinal ? "is-watching" : ""}`}
+        className="film-stage"
         ref={stage}
       >
         <svg className="mask-defs" aria-hidden="true">
@@ -369,7 +378,7 @@ export default function FilmStage({
                 fontSize=".6"
                 fontWeight="900"
               >
-                表达
+                色彩
               </text>
               <rect ref={aperture} x=".5" y=".5" width="0" height="0" />
             </clipPath>
@@ -385,7 +394,7 @@ export default function FilmStage({
               }}
             >
               <div
-                className="film-picture"
+                className={`film-picture ${s.id === "nature" && graded ? "is-graded" : ""}`}
                 ref={(e) => {
                   pictures.current[i] = e;
                 }}
@@ -403,26 +412,31 @@ export default function FilmStage({
                   preload="none"
                   muted
                   playsInline
-                  loop={false}
+                  loop={i > 0}
+                  onCanPlay={syncPlayback}
+                  onLoadedData={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                    syncPlayback();
+                  }}
+                  onEmptied={(e) => {
+                    e.currentTarget.style.opacity = "0";
+                  }}
                   style={{ objectPosition: s.position }}
                   onPlaying={() => {
-                    if (i === 3) {
+                    if (i === speechIndex && voice.current) {
                       setVoicePlaying(true);
                       onVoice(true);
                     }
-                    if (i === 6) setPlayingFinal(true);
                   }}
                   onPause={() => {
-                    if (i === 3) {
+                    if (i === speechIndex) {
                       setVoicePlaying(false);
                       onVoice(false);
                     }
-                    if (i === 6) setPlayingFinal(false);
                   }}
                   onEnded={() => {
                     if (i === active.current) setEnded(true);
-                    if (i === 3) stopVoice();
-                    if (i === 6) setPlayingFinal(false);
+                    if (i === speechIndex) stopVoice();
                   }}
                   onError={() => {
                     if (videos.current[i]?.hasAttribute("src"))
@@ -431,7 +445,7 @@ export default function FilmStage({
                       );
                   }}
                   onTimeUpdate={(e) => {
-                    if (i === 3) {
+                    if (i === speechIndex) {
                       const t = e.currentTarget.currentTime;
                       setLine(
                         t < 3.54
@@ -455,17 +469,18 @@ export default function FilmStage({
           <div className="film-scrim" />
           <div ref={shade} className="transition-shade" />
           <div ref={typeMask} className="type-transition">
-            表达
+            色彩
           </div>
         </div>
         {scenes.map((s, i) => (
           <article
-            className={`scene-copy copy-${s.id}`}
+            className={`scene-copy copy-${s.id} ${i > 0 && i < 6 ? "feature-copy" : ""}`}
             key={s.id}
             ref={(e) => {
               copies.current[i] = e;
             }}
             aria-label={s.label}
+            data-clock={i}
           >
             <p className="eyebrow">{s.label}</p>
             {i === 0 ? (
@@ -482,6 +497,17 @@ export default function FilmStage({
               </h2>
             )}
             <p className="scene-description">{s.description}</p>
+            {s.benefit && <p className="scene-benefit">{s.benefit}</p>}
+            {s.id === "nature" && (
+              <button
+                className="grade-toggle"
+                aria-pressed={graded}
+                onClick={() => setGraded(!graded)}
+              >
+                {graded ? "恢复原始色彩" : "查看色彩预览"}
+                <span>同一段风景</span>
+              </button>
+            )}
             {i === 0 ? (
               <div className="scene-actions">
                 <button
@@ -503,7 +529,7 @@ export default function FilmStage({
                   静音探索 <ArrowDown size={16} />
                 </button>
               </div>
-            ) : i === 3 ? (
+            ) : i === speechIndex ? (
               <div className="voice-actions">
                 <button
                   className="primary voice-toggle"
@@ -517,15 +543,11 @@ export default function FilmStage({
                   onClick={() => onFeature("speech")}
                   aria-label="了解智能剪口播"
                 >
-                  了解相关能力 <ArrowUpRight size={15} />
+                  了解更多 <ArrowUpRight size={15} />
                 </button>
               </div>
             ) : i === 6 ? (
               <div className="scene-actions">
-                <button className="primary" onClick={() => void playFinal()}>
-                  {playingFinal ? <Pause size={17} /> : <Play size={17} />}{" "}
-                  {playingFinal ? "暂停短片" : "观看完整短片"}
-                </button>
                 <a
                   href={official}
                   target="_blank"
@@ -539,13 +561,10 @@ export default function FilmStage({
               <button
                 className="capability-link"
                 onClick={() => onFeature(s.id as FeatureId)}
-                aria-label={`了解${s.label.split(" · ")[0]}相关能力`}
+                aria-label={`了解${s.title.join("")}`}
               >
-                了解相关能力 <ArrowUpRight size={15} />
+                了解更多 <ArrowUpRight size={15} />
               </button>
-            )}
-            {i === 6 && (
-              <p className="scene-credit">《看见，未见》· 18 秒短片</p>
             )}
           </article>
         ))}
